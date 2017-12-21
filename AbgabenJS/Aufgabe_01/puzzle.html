@@ -5,12 +5,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		
 		<link type="text/css" rel="stylesheet" href="static/css/schiebepuzzle.css"/>
-		<script type="text/javascript" charset="utf-8" src="static/js/schiebepuzzle.js"></script>
-		
+        
 		<title>Puzzle by Thomas Sapelza</title>
 	</head>
 	<body onload="loadPuzzle();">
+        <input type="file" name="picture" id="selectedPicture"> 
 		<div id="container">
 		</div>
+        <h1 id="solvedText"></h1>
+        
+        <script type="text/javascript" charset="utf-8" src="static/js/schiebepuzzle.js"></script> <!-- Mein script -->
 	</body>
 </html>
