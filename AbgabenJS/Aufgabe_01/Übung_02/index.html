@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<link type="text/css" rel="stylesheet" href="static/css/style.css"/> <!-- Mein Stylesheet -->
+		
+		<title>Glasenuhr by Thomas Sapelza</title>
+	</head>
+	<body>
+		<div id="container">
+			<h2>Glasenuhr</h2>
+			<button id="currentTime" onclick="loadCurrentTime()">Jetzige Uhrzeit laden</button> <!-- Zeit laden button -->
+			<div id="inputTimeContainer"> <!-- Uhrzeit Eingabefelder -->
+				Stunde: <input type="text" id="hour" value="12" onload="getHours();"> <!-- Stunden Textfeld -->
+				<br>
+				<br>
+				Minute: <input type="text" id="minute" value="00" onload="getHours();"> <!-- Minuten Textfeld -->
+			</div>
+			<button id="bellClock" onclick="bellClock()">Glocken läuten</button> <!-- Glocken läuten button -->
+			<div id="textOutputContainer"> <!-- Textuelle Ausgabe -->
+				<p id="textOutput">Textuelle Ausgabe:
+				<br>----------------------------------------------<br>
+				Doppelschläge: 4 Einzelschläge: 0
+				<br>----------------------------------------------
+				</p>
+			</div>
+			<img id="helpImage" src="static/img/help.PNG" alt="Wikipedia Bild - Glasenuhr"> <!-- Bild von Wikipedia als Hilfe -->
+		</div>
+		
+		<script src="static/js/script.js"></script> <!-- Mein Script -->
+	</body>
+</html>

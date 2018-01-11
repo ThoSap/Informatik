@@ -1,0 +1,46 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+#container                                                       
+{
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+h2 {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	color: red;
+	font-size: 30px;
+}
+
+#currentTime {
+	margin-bottom: 20px;
+}
+
+#inputTimeContainer {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: 4px solid green;
+}
+
+#bellClock {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#textOutputContainer {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: 4px solid blue;
+}
+
+#helpImage {
+	margin-top: 25px;
+}
