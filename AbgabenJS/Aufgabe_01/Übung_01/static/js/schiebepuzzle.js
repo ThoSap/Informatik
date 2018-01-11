@@ -43,7 +43,7 @@ function loadPuzzle()
 	console.log("Random numbers:"); // TODO Delete
 	console.log(numbers); // TODO Delete
 	
-    createSolvedGrid(); // 2-Dimensionales Array mit der Lösung erstellen 
+	createSolvedGrid(); // 2-Dimensionales Array mit der Lösung erstellen 
 	createPuzzleGrid(numbers); // 2-Dimensionales Array mit den zufälligen Nummern füllen
 	drawPuzzleTiles(); // Puzzleteile darstellen (mit Zahlen)
 }
@@ -107,30 +107,30 @@ function createPuzzleGrid(numbers)
 /* 2-Dimensionales Array mit Lösung erstellen */
 function createSolvedGrid()
 {
-    solvedGrid = new Array(gridSizeY); // Array mit den Reihen erstellen
-    var number = 1; // Counter um Zahlen-Array Index hochzuzählen, startet bei 1, endet bei 0
-    
-    for (var i = 0; i < gridSizeY; i++)
-    {
-        solvedGrid[i] = new Array(gridSizeX); // Im Array am Index[i] die Spalten erstellen
-        
-        for (var j = 0; j < gridSizeY; j++)
-		{
-            if (number == gridSize) // Wenn die Zahl gleich gridSize ist dann wird die (letzte) Zahl 0 gesetzt
-            {
-                solvedGrid[i][j] = 0;
-            }
-            else
-            {
-                solvedGrid[i][j] = number; // Die Zahl am Index[i][j] einfügen
-            }
-            
-            number++; // Zahl hochzählen
-		}
-    }
+	solvedGrid = new Array(gridSizeY); // Array mit den Reihen erstellen
+	var number = 1; // Counter um Zahlen-Array Index hochzuzählen, startet bei 1, endet bei 0
 	
-    console.log("Puzzle solved grid array:"); // TODO Delete
-    console.log(solvedGrid);
+	for (var i = 0; i < gridSizeY; i++)
+	{
+		solvedGrid[i] = new Array(gridSizeX); // Im Array am Index[i] die Spalten erstellen
+		
+		for (var j = 0; j < gridSizeY; j++)
+		{
+			if (number == gridSize) // Wenn die Zahl gleich gridSize ist dann wird die (letzte) Zahl 0 gesetzt
+			{
+				solvedGrid[i][j] = 0;
+			}
+			else
+			{
+				solvedGrid[i][j] = number; // Die Zahl am Index[i][j] einfügen
+			}
+			
+			number++; // Zahl hochzählen
+		}
+	}
+	
+	console.log("Puzzle solved grid array:"); // TODO Delete
+	console.log(solvedGrid);
 }
 
 /* Puzzleteile darstellen */
@@ -160,23 +160,23 @@ function drawPuzzleTiles()
 /* Überprüfen ob das Puzzle gelöst wurde */
 function checkSolved()
 {
-    var equal = true; // Bool für überprüfung
-    
-    for (var i = 0; i < gridSizeY; i++) // Reihe
+	var equal = true; // Bool für überprüfung
+	
+	for (var i = 0; i < gridSizeY; i++) // Reihe
 	{
 		for (var j = 0; j < gridSizeX; j++) // Spalte
 		{
-            if (puzzleGrid[i][j] != solvedGrid[i][j]) // Zahl ist die selbe
-            {
-                equal = false; // equal wird auf false gesetzt
-            }
+			if (puzzleGrid[i][j] != solvedGrid[i][j]) // Zahl ist die selbe
+			{
+				equal = false; // equal wird auf false gesetzt
+			}
 		}
 	}
-    
-    if (equal) // Wenn alle Zahlen die selben sind bleibt equal true, sonst false
-    {
-        document.getElementById("solvedText").innerHTML = "Du hast das Puzzle gelöst ;D";
-    }
+	
+	if (equal) // Wenn alle Zahlen die selben sind bleibt equal true, sonst false
+	{
+		document.getElementById("solvedText").innerHTML = "Du hast das Puzzle gelöst ;D";
+	}
 }
 
 /* Puzzleteil wenn möglich verschieben/austauschen */
@@ -215,6 +215,6 @@ function movePuzzle(x, y)
 	{
 		drawPuzzleTiles(); // die Puzzleteile neu darstellen
 	}
-    
-    checkSolved(); // Überprüft ob das Puzzle gelöst wurde
+	
+	checkSolved(); // Überprüft ob das Puzzle gelöst wurde
 }
