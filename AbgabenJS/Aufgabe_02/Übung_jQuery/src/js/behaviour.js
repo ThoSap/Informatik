@@ -8,16 +8,28 @@ $(document).ready(function() {
 	});
 });
 
-$("#steuern_rot").onmouseover(function() {
-	$("#steuern_rot").css("background-color", "red");
+/*$("#steuern_rot").on({
+	mousehover: function() {
+		$("#steuern_rot").css("background-color", "red");
+	}
+});*/
+
+$("#steuern_rot").hover(function(){
+	$(this).css("background-color", "red");
+}, function() {
+	$(this).css("background-color", "grey");
 });
 
-$("#steuern_gruen").onmouseover(function() {
-	$("#steuern_rot").css("background-color", "green");
+$("#steuern_gruen").hover(function() {
+	$(this).css("background-color", "green");
+}, function() {
+	$(this).css("background-color", "grey");
 });
 
-$("#steuern_blau").onmouseover(function() {
-	$("#steuern_rot").css("background-color", "blue");
+$("#steuern_blau").hover(function() {
+	$(this).css("background-color", "blue");
+}, function() {
+	$(this).css("background-color", "grey");
 });
 
 $("#steuern_rot").click(function() {

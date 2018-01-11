@@ -31,7 +31,7 @@ html {
 
 /* STEUER CONTAINER */
 #steuer-container {
-	display: grid;
+	display: inline-grid;
     grid-column-gap: 100px;
     padding: 10px;
 }
@@ -55,4 +55,12 @@ html {
 	width: 80px;
     height: 150px;
     background-color: grey;
+}
+
+/* RATESPIEL */
+#ratespiel {
+	display: block;
+	border-top: 30px;
+	border-bottom: 100px;
+	background-color: aquamarine;
 }
