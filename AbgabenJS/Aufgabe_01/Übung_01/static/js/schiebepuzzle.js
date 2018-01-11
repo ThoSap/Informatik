@@ -2,9 +2,9 @@
 
 /*** ### DAS ORIGINAL VON THOMAS SAPELZA ### ***/
 
-// Veränderbar
+// >> ##### VERÄNDERBAR! ##### <<
 var gridSizeX = 3; // Spalten
-var gridSizeY = 3; // Reihen
+var gridSizeY = 3;// Reihen
 var tileSizeWidth = 100; // Puzzleteil Breite
 var tileSizeHeight = 100; // Puzzleteil Höhe
 
@@ -40,6 +40,7 @@ function loadPuzzle()
 	document.getElementById('container').innerHTML = puzzle; // HTML-Code in innerHTML Objekt "container" einfügen
 	
 	var numbers = randomNumbers(); // Zufällige Nummern generieren
+	console.log("Random numbers:"); // TODO Delete
 	console.log(numbers); // TODO Delete
 	
     createSolvedGrid(); // 2-Dimensionales Array mit der Lösung erstellen 
@@ -99,6 +100,7 @@ function createPuzzleGrid(numbers)
 		}
 	}
 	
+	console.log("Puzzle grid array:"); // TODO Delete
 	console.log(puzzleGrid); // TODO Delete
 }
 
@@ -126,7 +128,8 @@ function createSolvedGrid()
             number++; // Zahl hochzählen
 		}
     }
-    
+	
+    console.log("Puzzle solved grid array:"); // TODO Delete
     console.log(solvedGrid);
 }
 
