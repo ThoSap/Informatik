@@ -18,6 +18,6 @@ $(function() {
 			
 			// nach dem erfolgreichen Ajax-Request muss jQuery mobile die modifizierte Unterseite 
 			// mit der id [ID_EINTRAGEN] neu stylen
-		});	
-	})  
+		});
+	})
 });
